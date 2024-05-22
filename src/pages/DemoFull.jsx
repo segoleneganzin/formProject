@@ -1,31 +1,29 @@
 import { useState } from 'react';
 import Form from '../components/Form';
 
-const DemoContact = () => {
+const DemoFull = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = (name, email, message) => {
-    console.log(name, email, message);
+  const handleForm = () => {
     try {
       setErrorMessage('');
-      // Here you can manage action when form is well submitted
       setValidationMessage('Formulaire envoyé');
     } catch (error) {
       setValidationMessage('');
-      setErrorMessage("Erreur d'envoi du formulaire");
+      setErrorMessage(error.message);
     }
   };
   return (
     <Form
-      title={'Nous contacter'}
+      title={'Enquête'}
       btnText={'Envoyer'}
       onSubmitFunction={handleForm}
       validationMessage={validationMessage}
       errorMessage={errorMessage}
-      fieldNames={['name', 'email', 'message']}
+      fieldNames={['name', 'otherInfos', 'gender', 'country']}
     />
   );
 };
 
-export default DemoContact;
+export default DemoFull;

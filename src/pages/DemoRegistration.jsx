@@ -8,18 +8,14 @@ const DemoRegistration = () => {
     try {
       setErrorMessage('');
       if (email && password === passwordConfirmation) {
+        // Here you can manage action when form is well submitted
         setValidationMessage('Formulaire envoyé');
-        // TODO action when submit ok
       } else {
-        throw new Error("password doesn't match");
+        throw new Error('Les mots de passe de correspondent pas');
       }
     } catch (error) {
-      console.log(error);
-      if (error.message === "password doesn't match") {
-        setErrorMessage('Les mots de passe de correspondent pas');
-      } else {
-        setErrorMessage("Erreur d'envoi du formulaire");
-      }
+      setValidationMessage('');
+      setErrorMessage(error.message);
     }
   };
   return (
@@ -30,7 +26,6 @@ const DemoRegistration = () => {
       validationMessage={validationMessage}
       errorMessage={errorMessage}
       fieldNames={['email', 'password', 'passwordConfirmation']}
-      origin={'registration'}
     />
   );
 };

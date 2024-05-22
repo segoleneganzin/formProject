@@ -1,19 +1,29 @@
 import { useState } from 'react';
 import Form from '../components/Form';
+import data from '../assets/data.json';
 
 const DemoForm = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = () => {
+  const handleForm = (email, password) => {
     try {
       setErrorMessage('');
-      setValidationMessage('Formulaire envoyé');
-      // TODO action when submit ok
+      if (email === data.email && password !== data.password) {
+        throw new Error('Mot de passe incorrect');
+      }
+      if (email === data.email && password === data.password) {
+        // Here you can manage action when form is well submitted
+        setValidationMessage('Formulaire envoyé');
+      } else {
+        throw new Error('Combinaison incorrect');
+      }
     } catch (error) {
-      setErrorMessage("Erreur d'envoi du formulaire");
+      setValidationMessage('');
+      setErrorMessage(error.message);
     }
   };
+  //TODO allows inscription just under button
   return (
     <Form
       title={'Se connecter'}
@@ -22,7 +32,6 @@ const DemoForm = () => {
       validationMessage={validationMessage}
       errorMessage={errorMessage}
       fieldNames={['email', 'password']}
-      origin={'connection'}
     />
   );
 };
