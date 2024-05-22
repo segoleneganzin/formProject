@@ -1,0 +1,57 @@
+.form {
+  @include flexCol;
+  align-items: center;
+  background-color: #15172b;
+  border-radius: $radius;
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+  gap: 30px;
+  padding: 40px 50px;
+  min-width: fit-content;
+  &__title {
+    border-bottom: solid 2px $white;
+    padding-bottom: 20px;
+  }
+  &__content {
+    @include flexCol;
+    align-items: center;
+    gap: 15px;
+  }
+  &__data {
+    @include flexCol;
+    gap: 0px;
+    max-width: 300px;
+    width: 300px;
+    .error {
+      color: $error;
+      margin-top: 5px;
+    }
+  }
+  &__label {
+    color: $white;
+  }
+  &__input,
+  &__textarea {
+    background-color: #303245;
+    border-radius: $radius;
+    border: 0;
+    box-sizing: border-box;
+    color: $white;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+  &__input {
+    height: 35px;
+  }
+  &__textarea {
+    height: 200px;
+  }
+  &__message {
+    &--validation {
+      color: $green;
+    }
+    &--error {
+      color: $error;
+    }
+  }
+}
