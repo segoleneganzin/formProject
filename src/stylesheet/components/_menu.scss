@@ -1,15 +1,20 @@
 .menu {
   display: none;
+  gap: 45px;
   position: relative;
   &--responsive {
     animation: open-hamburger 200ms forwards;
+    background-color: rgb(2, 0, 36);
     border-radius: 0 0 0 50px;
     display: flex;
     flex-direction: column;
+    gap: 10px;
     height: fit-content;
     padding: 20px;
+    padding-left: 30px;
     position: absolute;
-    right: 0;
+    right: 0px;
+    top: 55px;
     transform-origin: top;
     width: fit-content;
     z-index: 99;
@@ -28,7 +33,7 @@
   }
   @include min-media-breakpoint($breakpoint-laptop) {
     display: flex;
-    &__burger-icon-link {
+    &__burger-icon {
       display: none;
     }
   }

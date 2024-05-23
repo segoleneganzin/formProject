@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/Form';
+import Form from '../components/form/Form';
 
 const DemoContact = () => {
   const [validationMessage, setValidationMessage] = useState('');
@@ -17,14 +17,16 @@ const DemoContact = () => {
     }
   };
   return (
-    <Form
-      title={'Nous contacter'}
-      btnText={'Envoyer'}
-      onSubmitFunction={handleForm}
-      validationMessage={validationMessage}
-      errorMessage={errorMessage}
-      fieldNames={['name', 'email', 'message']}
-    />
+    <div className='container'>
+      <Form
+        title={'Nous contacter'}
+        btnText={'Envoyer'}
+        onSubmitFunction={handleForm}
+        validationMessage={validationMessage}
+        errorMessage={errorMessage}
+        fieldNames={['name', 'email', 'message']}
+      />
+    </div>
   );
 };
 

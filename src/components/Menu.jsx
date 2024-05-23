@@ -36,7 +36,7 @@ const Menu = () => {
         aria-expanded={hamburgerOpen}
         aria-label='Ouverture du menu'
       >
-        <span className='burger-icon'>
+        <span className='menu__burger-icon'>
           <span></span>
           <span></span>
           <span></span>

@@ -1,28 +1,28 @@
 import PropTypes from 'prop-types';
 
-const RadioField = ({ fieldName, field, register }) => (
-  <div className='form__radio'>
-    {field.radios.map((radio, index) => {
+const CheckboxField = ({ fieldName, field, register }) => (
+  <div className='form__checkboxes'>
+    {field.checkboxes.map((checkbox, index) => {
       return (
-        <div key={index}>
+        <div key={index} className='form__checkbox'>
           <input
-            id={radio.name}
+            id={checkbox.name}
             name={fieldName}
             type={field.type}
             {...register(fieldName, {
               required: field.isRequired,
             })}
-            value={radio.value}
+            value={checkbox.value}
           />
-          <label htmlFor={radio.name}>{radio.value}</label>
+          <label htmlFor={checkbox.name}>{checkbox.value}</label>
         </div>
       );
     })}
   </div>
 );
-RadioField.propTypes = {
+CheckboxField.propTypes = {
   fieldName: PropTypes.string.isRequired,
   field: PropTypes.object.isRequired,
   register: PropTypes.func.isRequired,
 };
-export default RadioField;
+export default CheckboxField;

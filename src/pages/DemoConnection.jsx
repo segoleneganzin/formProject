@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/Form';
+import Form from '../components/form/Form';
 import data from '../assets/data.json';
 
 const DemoForm = () => {
@@ -25,14 +25,16 @@ const DemoForm = () => {
   };
   //TODO allows inscription just under button
   return (
-    <Form
-      title={'Se connecter'}
-      btnText={'Connexion'}
-      onSubmitFunction={handleForm}
-      validationMessage={validationMessage}
-      errorMessage={errorMessage}
-      fieldNames={['email', 'password']}
-    />
+    <div className='container'>
+      <Form
+        title={'Se connecter'}
+        btnText={'Connexion'}
+        onSubmitFunction={handleForm}
+        validationMessage={validationMessage}
+        errorMessage={errorMessage}
+        fieldNames={['email', 'password']}
+      />
+    </div>
   );
 };
 

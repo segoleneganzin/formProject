@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/Form';
+import Form from '../components/form/Form';
 
 const DemoFull = () => {
   const [validationMessage, setValidationMessage] = useState('');
@@ -27,14 +27,16 @@ const DemoFull = () => {
     }
   };
   return (
-    <Form
-      title={'Enquête'}
-      btnText={'Envoyer'}
-      onSubmitFunction={handleForm}
-      validationMessage={validationMessage}
-      errorMessage={errorMessage}
-      fieldNames={['name', 'gender', 'country', 'animals', 'otherInfos']}
-    />
+    <div className='container'>
+      <Form
+        title={"Enquête d'adoption"}
+        btnText={'Envoyer'}
+        onSubmitFunction={handleForm}
+        validationMessage={validationMessage}
+        errorMessage={errorMessage}
+        fieldNames={['name', 'gender', 'country', 'animals', 'otherInfos']}
+      />
+    </div>
   );
 };
 

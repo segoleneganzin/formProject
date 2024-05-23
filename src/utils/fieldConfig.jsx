@@ -82,7 +82,7 @@ export const fieldConfig = {
   animals: {
     tag: 'checkbox',
     type: 'checkbox',
-    label: 'Animaux adoptés',
+    label: 'Animaux déjà adoptés',
     isRequired: false,
     checkboxes: [
       {

@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Form from '../components/Form';
+import Form from '../components/form/Form';
+
 const DemoRegistration = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
@@ -19,14 +20,16 @@ const DemoRegistration = () => {
     }
   };
   return (
-    <Form
-      title={"S'inscrire"}
-      btnText={'Inscription'}
-      onSubmitFunction={handleForm}
-      validationMessage={validationMessage}
-      errorMessage={errorMessage}
-      fieldNames={['email', 'password', 'passwordConfirmation']}
-    />
+    <div className='container'>
+      <Form
+        title={"S'inscrire"}
+        btnText={'Inscription'}
+        onSubmitFunction={handleForm}
+        validationMessage={validationMessage}
+        errorMessage={errorMessage}
+        fieldNames={['email', 'password', 'passwordConfirmation']}
+      />
+    </div>
   );
 };
 

@@ -1,12 +1,21 @@
-main {
-  @include flexCol;
-  align-items: center;
+html {
   background: rgb(2, 0, 36);
-  height: fit-content;
-  min-height: 78vh;
-  padding: 200px 0 100px;
-  top: 0;
-  width: 100vw;
+  box-sizing: border-box;
+}
+main {
+  margin: auto;
+  padding: 50px 0px;
+  @include min-media-breakpoint($breakpoint-mobileXS) {
+    padding: 50px 10px;
+  }
+}
+
+.container {
+  margin: auto;
+  width: 320px;
+  @include min-media-breakpoint($breakpoint-tablet) {
+    width: 450px;
+  }
 }
 
 .btn {

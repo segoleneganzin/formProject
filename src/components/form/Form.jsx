@@ -2,11 +2,11 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
-import { fieldConfig } from '../utils/fieldConfig';
-import TextField from './fields/TextField';
+import { fieldConfig } from '../../utils/fieldConfig';
+import OtherField from './fields/OtherField';
 import SelectField from './fields/SelectField';
 import RadioField from './fields/RadioField';
-import FormDataLayout from '../layouts/FormDataLayout';
+import FormDataLayout from '../../layouts/FormDataLayout';
 import CheckboxField from './fields/CheckboxField';
 
 /**
@@ -128,7 +128,7 @@ const Form = ({
               ) : field.tag === 'checkbox' ? (
                 <CheckboxField {...commonProps} />
               ) : (
-                <TextField {...commonProps} />
+                <OtherField {...commonProps} />
               )}
             </FormDataLayout>
           );

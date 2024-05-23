@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/Form';
+import Form from '../components/form/Form';
 import datas from '../assets/data.json';
 
 const DemoUpdate = () => {
@@ -27,15 +27,17 @@ const DemoUpdate = () => {
     }
   };
   return (
-    <Form
-      title={'Modifier mes données'}
-      btnText={'Valider'}
-      onSubmitFunction={handleForm}
-      validationMessage={validationMessage}
-      errorMessage={errorMessage}
-      fieldNames={['name', 'age', 'tel', 'email']}
-      fieldValue={datas}
-    />
+    <div className='container'>
+      <Form
+        title={'Modifier mes données'}
+        btnText={'Valider'}
+        onSubmitFunction={handleForm}
+        validationMessage={validationMessage}
+        errorMessage={errorMessage}
+        fieldNames={['name', 'age', 'tel', 'email']}
+        fieldValue={datas}
+      />
+    </div>
   );
 };
 

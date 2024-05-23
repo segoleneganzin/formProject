@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const TextField = ({ fieldName, field, register, inputErrorClass }) => {
+const OtherField = ({ fieldName, field, register, inputErrorClass }) => {
   const Tag = field.tag || 'input';
   return (
     <Tag
@@ -18,11 +18,11 @@ const TextField = ({ fieldName, field, register, inputErrorClass }) => {
   );
 };
 
-TextField.propTypes = {
+OtherField.propTypes = {
   fieldName: PropTypes.string.isRequired,
   field: PropTypes.object.isRequired,
   register: PropTypes.func.isRequired,
   inputErrorClass: PropTypes.func.isRequired,
 };
 
-export default TextField;
+export default OtherField;
