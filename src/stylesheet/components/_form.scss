@@ -6,7 +6,6 @@
   box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
   color: $text-color;
   gap: 30px;
-  margin-top: 50px;
   padding: 40px 50px;
   width: fit-content;
   &__title {
@@ -56,6 +55,10 @@
     option {
       padding: 0px;
     }
+  }
+  &__radio,
+  &__checkbox {
+    display: flex;
   }
   &__message {
     &--validation {

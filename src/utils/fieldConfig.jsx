@@ -6,21 +6,18 @@
 const isRequired = true; // default isRequired
 export const fieldConfig = {
   email: {
-    name: 'email',
     label: 'Email',
     type: 'email',
     pattern: /\S+@\S+\.\S+/,
     isRequired,
   },
   passwordConfirmation: {
-    name: 'passwordConfirmation',
     label: 'Confirmer le mot de passe :',
     type: 'password',
     pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
     isRequired,
   },
   password: {
-    name: 'password',
     label: 'Mot de passe',
     type: 'password',
     pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
@@ -28,17 +25,15 @@ export const fieldConfig = {
   },
   message: {
     tag: 'textarea',
-    name: 'message',
     label: 'Message',
     type: 'text',
     isRequired,
   },
-  name: { name: 'name', label: 'Nom', type: 'text', isRequired },
-  age: { name: 'age', label: 'Âge', type: 'number', isRequired },
-  tel: { name: 'tel', label: 'Téléphone', type: 'text', isRequired },
+  name: { label: 'Nom', type: 'text', isRequired },
+  age: { label: 'Âge', type: 'number', isRequired },
+  tel: { label: 'Téléphone', type: 'text', isRequired },
   otherInfos: {
     tag: 'textarea',
-    name: 'otherInfos',
     label: 'Autre(s) information(s)',
     type: 'text',
     isRequired: false,
@@ -46,19 +41,18 @@ export const fieldConfig = {
   // radio buttons
   gender: {
     tag: 'radio',
-    name: 'gender',
     type: 'radio',
     label: 'Genre',
-    isRequired: false,
+    isRequired,
     radios: [
       {
         label: 'Homme',
-        value: 'male',
+        value: 'Homme',
         name: 'male',
       },
       {
         label: 'Femme',
-        value: 'female',
+        value: 'Femme',
         name: 'female',
       },
     ],
@@ -66,8 +60,9 @@ export const fieldConfig = {
   // select
   country: {
     tag: 'select',
-    name: 'country',
     label: 'Pays',
+    defaultValue: 'Choisir une option',
+    isRequired,
     options: [
       {
         label: 'Angleterre',
@@ -82,6 +77,29 @@ export const fieldConfig = {
         value: 'France',
       },
     ],
-    isRequired,
+  },
+  // checkboxes
+  animals: {
+    tag: 'checkbox',
+    type: 'checkbox',
+    label: 'Animaux adoptés',
+    isRequired: false,
+    checkboxes: [
+      {
+        label: 'Chien',
+        value: 'chien',
+        name: 'dog',
+      },
+      {
+        label: 'Chat',
+        value: 'chat',
+        name: 'cat',
+      },
+      {
+        label: 'NAC',
+        value: 'NAC',
+        name: 'nac',
+      },
+    ],
   },
 };

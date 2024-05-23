@@ -5,8 +5,20 @@ const DemoFull = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = () => {
+  const handleForm = (name, gender, country, animals, otherInfos) => {
     try {
+      console.log(
+        'Nom : ' +
+          name +
+          ', genre : ' +
+          gender +
+          ', pays : ' +
+          country +
+          ', animaux adoptés : ' +
+          animals +
+          ', autres informations : ' +
+          otherInfos
+      );
       setErrorMessage('');
       setValidationMessage('Formulaire envoyé');
     } catch (error) {
@@ -21,7 +33,7 @@ const DemoFull = () => {
       onSubmitFunction={handleForm}
       validationMessage={validationMessage}
       errorMessage={errorMessage}
-      fieldNames={['name', 'otherInfos', 'gender', 'country']}
+      fieldNames={['name', 'gender', 'country', 'animals', 'otherInfos']}
     />
   );
 };

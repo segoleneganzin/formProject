@@ -3,6 +3,11 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { useForm } from 'react-hook-form';
 import { fieldConfig } from '../utils/fieldConfig';
+import TextField from './fields/TextField';
+import SelectField from './fields/SelectField';
+import RadioField from './fields/RadioField';
+import FormDataLayout from '../layouts/FormDataLayout';
+import CheckboxField from './fields/CheckboxField';
 
 /**
  * Form component dynamically generates a form based on provided configurations.
@@ -28,28 +33,6 @@ const Form = ({
   fieldNames,
   fieldValue,
 }) => {
-  /**
-   * Translates field names to their French equivalents when necessary.
-   * @param {string} value - The field name to translate.
-   * @returns {string} The translated field name.
-   */
-  const translation = (value) => {
-    switch (value) {
-      case 'name':
-        return 'nom';
-      case 'password':
-        return 'mot de passe';
-      case 'passwordConfirmation':
-        return 'mot de passe identique';
-      case 'country':
-        return 'pays';
-      case 'gender':
-        return 'genre';
-      default:
-        return value;
-    }
-  };
-
   // Destructuring properties from the useForm hook
   const {
     register,
@@ -60,19 +43,9 @@ const Form = ({
   } = useForm();
 
   /**
-   * Function to get the error class for a given field.
-   * @param {string} field - Name of the field.
-   * @returns {string} - Error class for the field.
-   */
-  const inputErrorClass = (field) => {
-    return errors[field] ? ' input-error' : '';
-  };
-
-  /**
    * Effect to set initial values for fields if provided.
    * e.g. for update form
    */
-  //TODO exemple with json file
   useEffect(() => {
     const fetchPost = async () => {
       try {
@@ -88,6 +61,32 @@ const Form = ({
       fetchPost();
     }
   }, [fieldNames, fieldValue, setValue]);
+
+  /**
+   * Translates field names to their French equivalents when necessary.
+   * @param {string} value - The field name to translate.
+   * @returns {string} The translated field name.
+   */
+  const translation = (value) => {
+    const translations = {
+      name: 'nom',
+      password: 'mot de passe',
+      passwordConfirmation: 'mot de passe identique',
+      country: 'pays',
+      gender: 'genre',
+      animals: 'animaux adoptés',
+    };
+    return translations[value] || value;
+  };
+
+  /**
+   * Function to get the error class for a given field.
+   * @param {string} field - Name of the field.
+   * @returns {string} - Error class for the field.
+   */
+  const inputErrorClass = (field) => {
+    return errors[field] ? ' input-error' : '';
+  };
 
   return (
     <form
@@ -106,68 +105,35 @@ const Form = ({
       {/* form content (fields + validation message + submit button) */}
       <div className='form__content'>
         {fieldNames.map((fieldName, index) => {
-          //get the field configuration from utils/fileConfig.jsx
           const field = fieldConfig[fieldName];
-          // Determine the tag to use (input by default, if the information isn't set into fieldConfig)
-          const Tag = field.tag || 'input';
+          const commonProps = {
+            fieldName,
+            field,
+            register,
+            inputErrorClass,
+          };
+
           return (
-            <div className='form__data' key={index}>
-              <label htmlFor={fieldName} className='form__label'>
-                {field.label}
-              </label>
-              {Tag === 'select' ? (
-                <select
-                  name={field.name}
-                  id={fieldName}
-                  className='form__select'
-                >
-                  {field.options.map((option, index) => {
-                    return (
-                      <option value={option.value} key={index}>
-                        {option.label}
-                      </option>
-                    );
-                  })}
-                </select>
-              ) : Tag === 'radio' ? (
-                field.radios.map((radio, index) => {
-                  return (
-                    <>
-                      <input
-                        type='radio'
-                        id={radio.name}
-                        name={field.name}
-                        value={radio.value}
-                        key={index}
-                      />
-                      <label htmlFor={radio.name}>{radio.value}</label>
-                    </>
-                  );
-                })
+            <FormDataLayout
+              fieldName={fieldName}
+              field={field}
+              errors={errors}
+              translation={translation}
+              key={index}
+            >
+              {field.tag === 'select' ? (
+                <SelectField {...commonProps} />
+              ) : field.tag === 'radio' ? (
+                <RadioField {...commonProps} />
+              ) : field.tag === 'checkbox' ? (
+                <CheckboxField {...commonProps} />
               ) : (
-                <Tag
-                  id={fieldName}
-                  name={field.name}
-                  type={field.type}
-                  className={
-                    `form__${field.tag || 'input'}` +
-                    inputErrorClass(field.name) // into css : form__input / form__textarea, ...
-                  }
-                  {...register(field.name, {
-                    required: field.isRequired,
-                    pattern: field.pattern || null, // null by default, if the information isn't set into fieldConfig
-                  })}
-                />
+                <TextField {...commonProps} />
               )}
-              <p className='form__data--error'>
-                {errors[field.name]?.type === 'required' && (
-                  <>Veuillez entrer votre {translation(field.name)}</>
-                )}
-                {errors[field.name]?.type === 'pattern' && <>Champ invalide</>}
-              </p>
-            </div>
+            </FormDataLayout>
           );
         })}
+
         <p className='form__message--validation'>{validationMessage}</p>
         <p className='form__message--error'>{errorMessage}</p>
         <button type='submit' className='btn'>
