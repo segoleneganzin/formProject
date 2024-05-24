@@ -1,8 +1,3 @@
-// Form field settings
-// Here you can add all field you want to use into forms
-// default tag = input
-// default pattern = null
-// label and type are always required
 const isRequired = true; // default isRequired
 export const fieldConfig = {
   email: {
@@ -51,7 +46,7 @@ export const fieldConfig = {
         name: 'male',
       },
       {
-        label: 'Femme',
+        label: 'coucou',
         value: 'Femme',
         name: 'female',
       },
@@ -99,6 +94,11 @@ export const fieldConfig = {
         label: 'NAC',
         value: 'NAC',
         name: 'nac',
+      },
+      {
+        label: 'Cheval',
+        value: 'Cheval',
+        name: 'Cheval',
       },
     ],
   },

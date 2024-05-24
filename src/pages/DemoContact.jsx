@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/form/Form';
+import { Form } from 'sg-form-lib';
 
 const DemoContact = () => {
   const [validationMessage, setValidationMessage] = useState('');

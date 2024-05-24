@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Form from '../components/form/Form';
+import { Form } from 'sg-form-lib';
 import data from '../assets/data.json';
 
 const DemoForm = () => {

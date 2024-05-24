@@ -1,5 +1,6 @@
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
+import 'sg-form-lib/style.css';
 import './stylesheet/style.scss';
 import Router from './Router.jsx';
 import PageLayout from './layouts/PageLayout.jsx';
