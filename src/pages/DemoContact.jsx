@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
+import { fieldConfigPerso } from '../fieldConfigPerso';
 
 const DemoContact = () => {
   const [validationMessage, setValidationMessage] = useState('');
@@ -19,6 +20,7 @@ const DemoContact = () => {
   return (
     <div className='container'>
       <Form
+        fieldsConfig={fieldConfigPerso}
         title={'Nous contacter'}
         btnText={'Envoyer'}
         onSubmitFunction={handleForm}

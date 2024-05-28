@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className='header'>
       <h1>
-        <Link to={'/'}>Form Project</Link>
+        <Link to={'/'}>SG Form Lib Démo</Link>
       </h1>
       <Menu />
     </header>

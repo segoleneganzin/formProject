@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
+import { fieldConfigPerso } from '../fieldConfigPerso';
 
 const DemoRegistration = () => {
   const [validationMessage, setValidationMessage] = useState('');
@@ -22,6 +23,7 @@ const DemoRegistration = () => {
   return (
     <div className='container'>
       <Form
+        fieldsConfig={fieldConfigPerso}
         title={"S'inscrire"}
         btnText={'Inscription'}
         onSubmitFunction={handleForm}

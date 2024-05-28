@@ -1,0 +1,14 @@
+.home {
+  &__summary {
+    padding: 10px 30px;
+  }
+  &__section {
+    padding: 20px 30px;
+    &-title {
+      border-bottom: solid 2px #eee;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      width: fit-content;
+    }
+  }
+}

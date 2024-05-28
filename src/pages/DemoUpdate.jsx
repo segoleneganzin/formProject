@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
 import datas from '../assets/data.json';
+import { fieldConfigPerso } from '../fieldConfigPerso';
 
 const DemoUpdate = () => {
   const [validationMessage, setValidationMessage] = useState('');
@@ -29,7 +30,9 @@ const DemoUpdate = () => {
   return (
     <div className='container'>
       <Form
+        fieldsConfig={fieldConfigPerso}
         title={'Modifier mes données'}
+        subtitle={'Ici vous pouvez modifier vos données personnelles'}
         btnText={'Valider'}
         onSubmitFunction={handleForm}
         validationMessage={validationMessage}

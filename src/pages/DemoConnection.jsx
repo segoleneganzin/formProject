@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
 import data from '../assets/data.json';
+import { fieldConfigPerso } from '../fieldConfigPerso';
 
-const DemoForm = () => {
+const DemoConnexion = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
@@ -27,6 +28,7 @@ const DemoForm = () => {
   return (
     <div className='container'>
       <Form
+        fieldsConfig={fieldConfigPerso}
         title={'Se connecter'}
         btnText={'Connexion'}
         onSubmitFunction={handleForm}
@@ -38,4 +40,4 @@ const DemoForm = () => {
   );
 };
 
-export default DemoForm;
+export default DemoConnexion;
