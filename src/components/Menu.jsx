@@ -12,19 +12,19 @@ const Menu = () => {
     <div>
       <nav className={hamburgerOpen ? 'menu--responsive' : 'menu'}>
         <Link to={'/demo-connection'} className='menu__item-link'>
-          Connexion
+          Démo connexion
         </Link>
         <Link to={'/demo-registration'} className='menu__item-link'>
-          Inscription
+          Démo inscription
         </Link>
         <Link to={'/demo-contact'} className='menu__item-link'>
-          Contact
+          Démo contact
         </Link>
         <Link to={'/demo-update'} className='menu__item-link'>
-          Pré-remplis
+          Démo pré-remplis
         </Link>
         <Link to={'/demo-full'} className='menu__item-link'>
-          Complet
+          Démo complet
         </Link>
       </nav>
       <a
