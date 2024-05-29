@@ -12,7 +12,7 @@ const Menu = () => {
     <div>
       <nav
         className={hamburgerOpen ? 'menu--responsive' : 'menu'}
-        onClick={toggleResponsiveMenu}
+        onClick={hamburgerOpen ? toggleResponsiveMenu : ''}
       >
         <Link to={'/demo-connection'} className='menu__item-link'>
           Démo connexion
