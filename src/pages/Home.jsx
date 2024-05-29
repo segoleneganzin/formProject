@@ -14,7 +14,9 @@ import HomeComponentForm from '../components/home/HomeComponentForm';
 const Home = () => {
   return (
     <>
-      <p>Site présentant des démonstrations de formulaires</p>
+      <p className='subtitle'>
+        Site présentant des démonstrations de formulaires
+      </p>
       <HomeSummary />
       <div className='home__external-link-section'>
         <Link

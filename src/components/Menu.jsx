@@ -4,13 +4,16 @@ import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-  const openResponsiveMenu = () => {
+  const toggleResponsiveMenu = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
 
   return (
     <div>
-      <nav className={hamburgerOpen ? 'menu--responsive' : 'menu'}>
+      <nav
+        className={hamburgerOpen ? 'menu--responsive' : 'menu'}
+        onClick={toggleResponsiveMenu}
+      >
         <Link to={'/demo-connection'} className='menu__item-link'>
           Démo connexion
         </Link>
@@ -30,7 +33,7 @@ const Menu = () => {
       <a
         href='#'
         className='icon'
-        onClick={openResponsiveMenu}
+        onClick={toggleResponsiveMenu}
         aria-haspopup='true'
         aria-controls='toggleNavbar'
         aria-expanded={hamburgerOpen}
