@@ -36,6 +36,10 @@ const DemoConnexion = () => {
         errorMessage={errorMessage}
         fieldNames={['email', 'password']}
       />
+      <p className='demo-infos'>
+        Pour tester la validation vous pouvez indiquer l&apos;email
+        &apos;test@test.com&apos;, et le mot de passe &apos;Test1234&apos;
+      </p>
     </div>
   );
 };

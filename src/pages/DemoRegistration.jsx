@@ -31,6 +31,18 @@ const DemoRegistration = () => {
         errorMessage={errorMessage}
         fieldNames={['email', 'password', 'passwordConfirmation']}
       />
+      <p className='demo-infos'>
+        Le mot de passe doit avoir un minimum de 8 caractères et comporter au
+        moins : <br />
+        - Une lettre majuscule
+        <br />
+        - Une lettre minuscule
+        <br />
+        - Un chiffre
+        <br />
+        - Un caractère spécial
+        <br />
+      </p>
     </div>
   );
 };
