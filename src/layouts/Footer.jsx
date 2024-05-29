@@ -6,8 +6,8 @@ const Footer = () => {
   return (
     <footer className='footer'>
       <div className='footer__social-media'>
-        <a
-          href='https://www.linkedin.com/in/segoleneganzin/'
+        <Link
+          to='https://www.linkedin.com/in/segoleneganzin/'
           rel='noreferrer'
           target='_blank'
         >
@@ -15,18 +15,18 @@ const Footer = () => {
             src={logoLinkedin}
             alt='Logo Linkedin - page de profil Linkedin'
           />
-        </a>
-        <a
-          href='https://github.com/segoleneganzin'
+        </Link>
+        <Link
+          to='https://github.com/segoleneganzin'
           rel='noreferrer'
           target='_blank'
         >
           <img src={logoGitHub} alt='Logo GitHub - page de profil GitHub' />
-        </a>
+        </Link>
       </div>
       <p>
         &copy; 2024 Réalisé par{' '}
-        <Link href='https://segoleneganzin.fr' rel='noreferrer' target='_blank'>
+        <Link to='https://segoleneganzin.fr' rel='noreferrer' target='_blank'>
           Ségolène GANZIN
         </Link>
       </p>

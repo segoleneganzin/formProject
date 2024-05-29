@@ -24,7 +24,7 @@ const DemoConnexion = () => {
       setErrorMessage(error.message);
     }
   };
-  //TODO allows inscription just under button
+
   return (
     <div className='container'>
       <Form

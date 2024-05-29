@@ -1,11 +1,14 @@
 .home__summary {
-  border: 2px solid $text-color;
-  border-radius: $radius;
   margin-bottom: 25px;
   padding: 10px 30px;
   ul {
     @include flexCol;
     gap: 20px;
     list-style-type: none;
+    padding-left: 0px;
+  }
+  @include min-media-breakpoint($breakpoint-tablet) {
+    border: 2px solid $text-color;
+    border-radius: $radius;
   }
 }

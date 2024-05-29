@@ -16,11 +16,21 @@ const Home = () => {
     <>
       <HomeSummary />
       <div className='home__external-link-section'>
-        <Link to={'/'} className='home__external-link'>
-          Lien npm
+        <Link
+          to={'https://www.npmjs.com/package/sg-form-lib'}
+          target='_blank'
+          className='home__external-link'
+        >
+          👉 npm
         </Link>
-        <Link to={'/'} className='home__external-link'>
-          Lien CodeSandBox
+        <Link
+          to={
+            'https://codesandbox.io/p/devbox/sg-form-lib-test-2zrpn6?file=%2Fsrc%2Fpages%2FHome.jsx%3A23%2C10'
+          }
+          target='_blank'
+          className='home__external-link'
+        >
+          👉 CodeSandBox
         </Link>
       </div>
       <div className='home__content'>

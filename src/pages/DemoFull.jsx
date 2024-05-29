@@ -36,7 +36,14 @@ const DemoFull = () => {
         onSubmitFunction={handleForm}
         validationMessage={validationMessage}
         errorMessage={errorMessage}
-        fieldNames={['name', 'gender', 'country', 'animals', 'otherInfos']}
+        fieldNames={[
+          'name',
+          'color',
+          'gender',
+          'country',
+          'animals',
+          'otherInfos',
+        ]}
       />
     </div>
   );

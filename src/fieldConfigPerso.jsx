@@ -6,10 +6,10 @@
 const isRequired = true; // default isRequired
 export const fieldConfigPerso = {
   email: {
-    label: 'Test',
+    label: 'Email',
     type: 'email',
     pattern: /\S+@\S+\.\S+/,
-    fieldErrorMessage: 'Test',
+    fieldErrorMessage: 'Veuillez renseigner votre email',
     isRequired,
   },
   passwordConfirmation: {
@@ -50,6 +50,11 @@ export const fieldConfigPerso = {
     type: 'text',
     fieldErrorMessage: 'Veuillez renseigner votre numéro de téléphone',
     isRequired,
+  },
+  color: {
+    label: 'Couleur',
+    type: 'color',
+    isRequired: false,
   },
   otherInfos: {
     tag: 'textarea',
@@ -109,17 +114,17 @@ export const fieldConfigPerso = {
     checkboxes: [
       {
         label: 'Chien',
-        value: 'chien',
+        value: 'dog',
         name: 'dog',
       },
       {
         label: 'Chat',
-        value: 'chat',
+        value: 'cat',
         name: 'cat',
       },
       {
         label: 'NAC',
-        value: 'NAC',
+        value: 'nac',
         name: 'nac',
       },
     ],

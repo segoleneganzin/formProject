@@ -1,0 +1,11 @@
+.footer {
+  @include flexCol;
+  align-items: center;
+  gap: 16px;
+  padding: 25px;
+  &__social-media {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}

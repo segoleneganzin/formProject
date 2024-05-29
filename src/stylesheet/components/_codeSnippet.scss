@@ -1,5 +1,8 @@
 .code-snippet {
   border-radius: $radius;
-  margin: 30px auto;
-  width: fit-content;
+  overflow-x: scroll;
+  @include min-media-breakpoint($breakpoint-tablet) {
+    margin: 30px auto;
+    // width: fit-content;
+  }
 }

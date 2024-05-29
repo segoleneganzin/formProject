@@ -5,7 +5,7 @@ const Header = () => {
     <header className='header'>
       <div>
         <h1>
-          <Link to={'/'}>SG Form Lib Démo</Link>
+          <Link to={'/'}>SG Form Lib</Link>
         </h1>
         <p>Librairie ReactJS simplifiant la création de formulaires</p>
       </div>
