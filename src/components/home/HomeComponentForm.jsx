@@ -1,8 +1,8 @@
+import HomeSection from '../../layouts/HomeSection';
+
 const HomeComponentForm = () => {
   return (
-    <section id='componentForm' className='home__section'>
-      <h2 className='home__section-title'>Composant Form</h2>
-      <p className='home__section-p'>Props</p>
+    <HomeSection id={'componentForm'} title={'Props du composant Form'}>
       <ul className='home__section-list'>
         <li>
           btnText (string, required) : Le texte du bouton de soumission du
@@ -35,7 +35,7 @@ const HomeComponentForm = () => {
         </li>
         <li>id (string) : l&apos;id correspondant au form.</li>
       </ul>
-    </section>
+    </HomeSection>
   );
 };
 

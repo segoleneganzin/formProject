@@ -1,12 +1,12 @@
 html {
-  background: rgb(2, 0, 36);
+  background: $background-color;
   box-sizing: border-box;
 }
 main {
   margin: auto;
   padding: 50px 0px;
   @include min-media-breakpoint($breakpoint-mobileXS) {
-    padding: 50px 10px;
+    padding: 50px 100px;
   }
 }
 

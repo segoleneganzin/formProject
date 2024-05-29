@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Header from './Header.jsx';
+import Footer from './Footer.jsx';
 /**
  * Application layout.
  * Use into main.jsx
@@ -12,6 +13,7 @@ const PageLayout = ({ children }) => {
     <>
       <Header />
       <main>{children}</main>
+      <Footer />
     </>
   );
 };

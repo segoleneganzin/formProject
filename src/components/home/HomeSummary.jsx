@@ -19,7 +19,7 @@ const HomeSummary = () => {
           <a href='#fields'>Champs prédéfinis</a>
         </li>
         <li>
-          <a href='#fieldsExamples'>Exemples</a>
+          <a href='#fieldsExamples'>Exemples de champs</a>
         </li>
         <li>
           <a href='#fieldConfig'>Personnalisation des champs</a>
@@ -31,7 +31,7 @@ const HomeSummary = () => {
           <a href='#formPreFilling'>Pré-remplissage du formulaire</a>
         </li>
         <li>
-          <a href='#componentForm'>Composant Form</a>
+          <a href='#componentForm'>Props du composant Form</a>
         </li>
       </ul>
     </nav>

@@ -1,0 +1,11 @@
+.home__summary {
+  border: 2px solid $text-color;
+  border-radius: $radius;
+  margin-bottom: 25px;
+  padding: 10px 30px;
+  ul {
+    @include flexCol;
+    gap: 20px;
+    list-style-type: none;
+  }
+}

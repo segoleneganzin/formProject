@@ -1,0 +1,20 @@
+.home__section {
+  background-color: $text-color;
+  border-radius: $radius;
+  padding: 20px 30px;
+  &-title {
+    border-bottom: solid 2px $background-color;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    width: fit-content;
+  }
+  a {
+    background-color: $background-color;
+    border-radius: $radius;
+    padding: 10px;
+  }
+  &-code {
+    background-color: rgb(218, 217, 217);
+    padding: 2px 10px;
+  }
+}

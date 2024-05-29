@@ -1,14 +1,18 @@
 .home {
-  &__summary {
-    padding: 10px 30px;
+  &__content {
+    @include flexCol;
+    gap: 40px;
   }
-  &__section {
-    padding: 20px 30px;
-    &-title {
-      border-bottom: solid 2px #eee;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      width: fit-content;
+  &__external-link {
+    background-color: $text-color;
+    border-radius: $radius;
+    padding: 15px;
+    &-section {
+      align-items: center;
+      display: flex;
+      gap: 50px;
+      justify-content: center;
+      margin-bottom: 25px;
     }
   }
 }

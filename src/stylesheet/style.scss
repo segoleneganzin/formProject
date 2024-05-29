@@ -8,10 +8,11 @@
 @import './base/base', './base/typography';
 
 // 4. Layout-related sections
-@import './layouts/footer', './layouts/header';
+@import './layouts/footer', './layouts/header', './layouts/homeSection';
 
 // 5. Components
-@import './components/menu';
+@import './components/menu', './components/codeSnippet',
+  './components/homeSummary';
 
 // 6. Page-specific styles
 @import './pages/home';
