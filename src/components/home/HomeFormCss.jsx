@@ -22,6 +22,7 @@ const HomeFormCss = () => {
           <li>sg-form-lib__data--error</li>
           <li>sg-form-lib__label</li>
           <li>sg-form-lib__input</li>
+          <li>sg-form-lib__input--error</li>
           <li>sg-form-lib__textarea</li>
           <li>sg-form-lib__checkboxes</li>
           <li>sg-form-lib__checkbox</li>

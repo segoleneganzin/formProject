@@ -36,8 +36,8 @@ importers:
         specifier: ^1.77.2
         version: 1.77.2
       sg-form-lib:
-        specifier: 1.0.5
-        version: 1.0.5
+        specifier: 1.0.7
+        version: 1.0.7
     devDependencies:
       '@types/react':
         specifier: ^18.3.3
@@ -1413,8 +1413,8 @@ packages:
     resolution: {integrity: sha512-7PGFlmtwsEADb0WYyvCMa1t+yke6daIG4Wirafur5kcf+MhUnPms1UeR0CKQdTZD81yESwMHbtn+TR+dMviakQ==}
     engines: {node: '>= 0.4'}
 
-  sg-form-lib@1.0.5:
-    resolution: {integrity: sha512-dyRf/b6VQRzJbFkQc1pJfWw+RnqD6CrckShnEwqRdCB1RXDRkhM7Ch0U/f3PELUZtvEeT4yz8txkFXBTcTVdBA==}
+  sg-form-lib@1.0.7:
+    resolution: {integrity: sha512-acQ+DKYCRJOzHxDEfX6yLcjSOJjHhF204zSrhzrHOsqflKBaxSq0fqIHSfjX+i0juSM8BX8gzRF2grCJqRr4TA==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3104,7 +3104,7 @@ snapshots:
       functions-have-names: 1.2.3
       has-property-descriptors: 1.0.2
 
-  sg-form-lib@1.0.5:
+  sg-form-lib@1.0.7:
     dependencies:
       prop-types: 15.8.1
       react: 18.3.1
