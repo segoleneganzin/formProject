@@ -4,7 +4,7 @@ import HomeSection from '../../layouts/HomeSection';
 
 const HomeFormPreFilling = () => {
   const codeSnippet = `
-  import datas from '../assets/data.json';
+  import datas from '../assets/datas.json';
 
   <Form
     fieldsConfig={fieldConfigPerso}

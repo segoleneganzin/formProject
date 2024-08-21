@@ -1,60 +1,47 @@
 // Form field settings
 // Here you can add all field you want to use into forms
-// default tag = input
-// default pattern = null
-// label and type are always required
-const isRequired = true; // default isRequired
 export const fieldConfigPerso = {
   email: {
     label: 'Email',
     type: 'email',
     pattern: /\S+@\S+\.\S+/,
     fieldErrorMessage: 'Veuillez renseigner votre email',
-    isRequired,
-  },
-  passwordConfirmation: {
-    label: 'Confirmer le mot de passe :',
-    type: 'password',
-    pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
-    fieldErrorMessage: 'Veuillez confirmer votre mot de passe',
-    isRequired,
+    fieldClass: 'highlight',
+    // hidden: true,
   },
   password: {
     label: 'Mot de passe',
     type: 'password',
     pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
     fieldErrorMessage: 'Veuillez renseigner votre mot de passe',
-    isRequired,
   },
-  message: {
-    tag: 'textarea',
-    label: 'Message',
-    type: 'text',
-    fieldErrorMessage: 'Veuillez renseigner votre message',
-    isRequired,
+  passwordConfirmation: {
+    label: 'Confirmer le mot de passe :',
+    type: 'password',
+    pattern: /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/,
+    fieldErrorMessage: 'Veuillez confirmer votre mot de passe',
   },
   name: {
     label: 'Nom',
     type: 'text',
     fieldErrorMessage: 'Veuillez renseigner votre nom',
-    isRequired,
   },
   age: {
     label: 'Âge',
     type: 'number',
     fieldErrorMessage: 'Veuillez renseigner votre âge',
-    isRequired,
   },
   tel: {
     label: 'Téléphone',
     type: 'text',
     fieldErrorMessage: 'Veuillez renseigner votre numéro de téléphone',
-    isRequired,
   },
-  color: {
-    label: 'Couleur',
-    type: 'color',
-    isRequired: false,
+  // textarea
+  message: {
+    tag: 'textarea',
+    label: 'Message',
+    type: 'text',
+    fieldErrorMessage: 'Veuillez renseigner votre message',
   },
   otherInfos: {
     tag: 'textarea',
@@ -62,45 +49,44 @@ export const fieldConfigPerso = {
     type: 'text',
     isRequired: false,
   },
+
   // radio buttons
   gender: {
-    tag: 'radio',
     type: 'radio',
     label: 'Genre',
     fieldErrorMessage: 'Veuillez renseigner votre genre',
-    isRequired,
-    radios: [
+    options: [
       {
         label: 'Homme',
-        value: 'Homme',
+        value: 'male',
         name: 'male',
       },
       {
         label: 'Femme',
-        value: 'Femme',
+        value: 'female',
         name: 'female',
+        checked: true,
       },
     ],
   },
   // select
   country: {
-    tag: 'select',
+    type: 'select',
     label: 'Pays',
     defaultValue: 'Choisir une option',
     fieldErrorMessage: 'Veuillez renseigner votre pays',
-    isRequired,
     options: [
       {
         label: 'Angleterre',
-        value: 'Angleterre',
+        value: 'england',
       },
       {
         label: 'Espagne',
-        value: 'Espagne',
+        value: 'spain',
       },
       {
         label: 'France',
-        value: 'France',
+        value: 'france',
       },
     ],
   },
@@ -111,7 +97,7 @@ export const fieldConfigPerso = {
     label: 'Animaux déjà adoptés',
     fieldErrorMessage: 'Veuillez renseigner vos animaux adoptés',
     isRequired: false,
-    checkboxes: [
+    options: [
       {
         label: 'Chien',
         value: 'dog',

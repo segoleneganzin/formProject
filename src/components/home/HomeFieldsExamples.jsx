@@ -8,84 +8,81 @@ const HomeFieldsExamples = () => {
     label: 'Email',
     type: 'email',
     pattern: /\S+@\S+\.\S+/,
-    fieldErrorMessage: 'Veuillez renseigner votre email', 
-    isRequired,
+    fieldErrorMessage: 'Veuillez renseigner votre email',
   },
     `;
   const textareaExample = `
   message: {
-      tag: 'textarea',
-      label: 'Message',
-      type: 'text',
-      fieldErrorMessage: 'Veuillez renseigner votre message', 
-      isRequired,
-    },
+    tag: 'textarea',
+    label: 'Message',
+    type: 'text',
+    fieldErrorMessage: 'Veuillez renseigner votre message',
+  },
     `;
   const selectExample = `
   country: {
-    tag: 'select',
+    type: 'select',
     label: 'Pays',
-    defaultValue: 'Choisir une option',
-    fieldErrorMessage: 'Veuillez renseigner votre pays', 
-    isRequired,
+    defaultValue: 'Choisir votre pays',
+    fieldErrorMessage: 'Veuillez renseigner votre pays',
     options: [
       {
         label: 'Angleterre',
-        value: 'Angleterre',
+        value: 'england',
       },
       {
         label: 'Espagne',
-        value: 'Espagne',
+        value: 'spain',
       },
       {
         label: 'France',
-        value: 'France',
+        value: 'france',
       },
     ],
   },
   `;
   const radioExample = `
   gender: {
-    tag: 'radio',
     type: 'radio',
     label: 'Genre',
-    fieldErrorMessage: 'Veuillez renseigner votre genre', 
-    isRequired,
-    radios: [
+    fieldErrorMessage: 'Veuillez renseigner votre genre',
+    options: [
       {
         label: 'Homme',
-        value: 'Homme',
+        value: 'male',
         name: 'male',
       },
       {
         label: 'Femme',
-        value: 'Femme',
+        value: 'female',
         name: 'female',
+        checked: true,
       },
     ],
   },
   `;
   const checkboxExample = `
-  foodAllergies: {
+  animals: {
     tag: 'checkbox',
     type: 'checkbox',
-    label: 'Allergie(s) alimentaire(s)', 
+    label: 'Animaux déjà adoptés',
+    fieldErrorMessage: 'Veuillez renseigner vos animaux adoptés',
     isRequired: false,
-    checkboxes: [
+    options: [
       {
-        label: 'Gluten',
-        value: 'gluten',
-        name: 'gluten',
+        label: 'Chien',
+        value: 'dog',
+        name: 'dog',
       },
       {
-        label: 'Arachides',
-        value: 'peanuts',
-        name: 'peanuts',
+        label: 'Chat',
+        value: 'cat',
+        name: 'cat',
       },
       {
-        label: 'Lactose',
-        value: 'milk',
-        name: 'milk',
+        label: 'NAC',
+        value: 'nac',
+        name: 'nac',
       },
     ],
   },
@@ -98,7 +95,17 @@ const HomeFieldsExamples = () => {
     >
       <>
         <p className='home__section-p'>
-          Par défaut les champs sont requis. <br />
+          Par défaut : <br />
+          - les champs sont requis <br />
+          - tag = input <br />
+          - hidden = false <br />
+          - step = null <br />
+          - fieldClass = &apos;&apos;
+          <br />
+          - isRequired = true
+          <br />
+          - pattern = null
+          <br />
         </p>
         <ul className='home__section-list'>
           <li>Input</li>

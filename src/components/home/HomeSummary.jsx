@@ -25,13 +25,16 @@ const HomeSummary = () => {
           <a href='#fieldConfig'>Personnalisation des champs</a>
         </li>
         <li>
+          <a href='#fieldsParams'>Paramètres des champs</a>
+        </li>
+        <li>
+          <a href='#componentForm'>Props du composant Form</a>
+        </li>
+        <li>
           <a href='#formCss'>Classes CSS utilisées</a>
         </li>
         <li>
           <a href='#formPreFilling'>Pré-remplissage du formulaire</a>
-        </li>
-        <li>
-          <a href='#componentForm'>Props du composant Form</a>
         </li>
       </ul>
     </nav>

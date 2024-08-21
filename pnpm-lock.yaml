@@ -36,8 +36,8 @@ importers:
         specifier: ^1.77.2
         version: 1.77.2
       sg-form-lib:
-        specifier: 1.0.8
-        version: 1.0.8
+        specifier: 2.0.10
+        version: 2.0.10
     devDependencies:
       '@types/react':
         specifier: ^18.3.3
@@ -1398,6 +1398,11 @@ packages:
     engines: {node: '>=14.0.0'}
     hasBin: true
 
+  sass@1.77.8:
+    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+
   scheduler@0.23.2:
     resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
 
@@ -1413,8 +1418,8 @@ packages:
     resolution: {integrity: sha512-7PGFlmtwsEADb0WYyvCMa1t+yke6daIG4Wirafur5kcf+MhUnPms1UeR0CKQdTZD81yESwMHbtn+TR+dMviakQ==}
     engines: {node: '>= 0.4'}
 
-  sg-form-lib@1.0.8:
-    resolution: {integrity: sha512-PNbBc/FIhoR7YMaRw/GaTwoFAi1++3Zq0lvHnRGt25aL46jg9wrv120jMWzia8Ct8n3p3rzYVzvyP2gLvgab4A==}
+  sg-form-lib@2.0.10:
+    resolution: {integrity: sha512-1DqjkkzySi38oIWOwDKwKqPfEpzx9gzcXhg3WcSIE75vUPcvyC1df+YYsY8sYK4IZn4+fAY6ExsJJB+ta0f/uw==}
 
   shebang-command@2.0.0:
     resolution: {integrity: sha512-kHxr2zZpYtdmrN1qDjrrX/Z1rR1kG8Dx+gkpK1G4eXmvXswmcE1hTWBWYUzlraYw1/yZp6YuDY77YtvbN0dmDA==}
@@ -3082,6 +3087,12 @@ snapshots:
       immutable: 4.3.6
       source-map-js: 1.2.0
 
+  sass@1.77.8:
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.6
+      source-map-js: 1.2.0
+
   scheduler@0.23.2:
     dependencies:
       loose-envify: 1.4.0
@@ -3104,14 +3115,14 @@ snapshots:
       functions-have-names: 1.2.3
       has-property-descriptors: 1.0.2
 
-  sg-form-lib@1.0.8:
+  sg-form-lib@2.0.10:
     dependencies:
       prop-types: 15.8.1
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
       react-hook-form: 7.51.5(react@18.3.1)
       react-router-dom: 6.23.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      sass: 1.77.2
+      sass: 1.77.8
 
   shebang-command@2.0.0:
     dependencies:

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
-import datas from '../assets/data.json';
-import { fieldConfigPerso } from '../fieldConfigPerso';
+import datas from '../assets/datas.json';
+import { fieldConfigPerso } from '../utils/fieldConfigPerso';
 
 const DemoUpdate = () => {
   const [validationMessage, setValidationMessage] = useState('');

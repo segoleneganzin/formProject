@@ -1,24 +1,24 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
-import { fieldConfigPerso } from '../fieldConfigPerso';
+import { fieldConfigPerso } from '../utils/fieldConfigPerso';
 
 const DemoFull = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = (name, gender, country, animals, otherInfos) => {
+  const handleForm = (formDatas) => {
     try {
       console.log(
         'Nom : ' +
-          name +
+          formDatas.name +
           ', genre : ' +
-          gender +
+          formDatas.gender +
           ', pays : ' +
-          country +
-          ', animaux adoptés : ' +
-          animals +
+          formDatas.country +
+          ', animaux : ' +
+          formDatas.animals +
           ', autres informations : ' +
-          otherInfos
+          formDatas.otherInfos
       );
       setErrorMessage('');
       setValidationMessage('Formulaire envoyé');
@@ -27,6 +27,7 @@ const DemoFull = () => {
       setErrorMessage(error.message);
     }
   };
+
   return (
     <div className='container'>
       <Form
@@ -36,14 +37,7 @@ const DemoFull = () => {
         onSubmitFunction={handleForm}
         validationMessage={validationMessage}
         errorMessage={errorMessage}
-        fieldNames={[
-          'name',
-          'color',
-          'gender',
-          'country',
-          'animals',
-          'otherInfos',
-        ]}
+        fieldNames={['name', 'gender', 'country', 'animals', 'otherInfos']}
       />
     </div>
   );

@@ -1,15 +1,18 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
-import { fieldConfigPerso } from '../fieldConfigPerso';
+import { fieldConfigPerso } from '../utils/fieldConfigPerso';
 
 const DemoRegistration = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = (email, password, passwordConfirmation) => {
+  const handleForm = (formDatas) => {
     try {
       setErrorMessage('');
-      if (email && password === passwordConfirmation) {
+      if (
+        formDatas.email &&
+        formDatas.password === formDatas.passwordConfirmation
+      ) {
         // Here you can manage action when form is well submitted
         setValidationMessage('Formulaire envoyé');
       } else {
@@ -31,18 +34,6 @@ const DemoRegistration = () => {
         errorMessage={errorMessage}
         fieldNames={['email', 'password', 'passwordConfirmation']}
       />
-      <p className='demo-infos'>
-        Le mot de passe doit avoir un minimum de 8 caractères et comporter au
-        moins : <br />
-        - Une lettre majuscule
-        <br />
-        - Une lettre minuscule
-        <br />
-        - Un chiffre
-        <br />
-        - Un caractère spécial
-        <br />
-      </p>
     </div>
   );
 };

@@ -10,6 +10,7 @@ import HomeFieldConfig from '../components/home/HomeFieldConfig';
 import HomeFormCss from '../components/home/HomeFormCss';
 import HomeFormPreFilling from '../components/home/HomeFormPreFilling';
 import HomeComponentForm from '../components/home/HomeComponentForm';
+import HomeFieldsParams from '../components/home/HomeFieldsParams';
 
 const Home = () => {
   return (
@@ -44,9 +45,10 @@ const Home = () => {
         <HomeFields />
         <HomeFieldsExamples />
         <HomeFieldConfig />
+        <HomeFieldsParams />
+        <HomeComponentForm />
         <HomeFormCss />
         <HomeFormPreFilling />
-        <HomeComponentForm />
       </div>
     </>
   );

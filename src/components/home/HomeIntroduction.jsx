@@ -3,7 +3,7 @@ import CodeSnippet from '../CodeSnippet';
 
 const HomeIntroduction = () => {
   const codeString = `
-  const handleForm = (email, password) => {  
+  const handleForm = (formFieldsData) => {  
     // what to do on submit
   };
 
@@ -28,10 +28,10 @@ const HomeIntroduction = () => {
           Les champs prédéfinis vous offrent une structure de base pour créer
           vos formulaires. <br />
           La gestion des erreurs est prise en compte. <br />
-          Il est possible d&apos;ajouter des pattern et de définir quels champs
-          sont requis. <br />
-          Il suffit de mettre les props adaptées. <br />
-          La séléction des champs se fait dans la prop{' '}
+          Il est possible d&apos;ajouter des patterns. <br />
+          Les champs sont, par défaut, requis. <br />
+          La séléction des champs que vous souhaitez mettre dans le formulaire
+          se fait via la prop{' '}
           <code className='home__section-code'>fieldNames</code>, ensuite le
           formulaire va automatiquement récupérer les données nécessaires dans
           le fichier de configuration. <br />
@@ -39,9 +39,6 @@ const HomeIntroduction = () => {
           prop <code className='home__section-code'>onSubmitFunction</code>, à
           laquelle vous passez la fonction souhaitée.
           <br />
-          Attention a bien passer les paramètres de cette fonction dans le même
-          ordre que les champs car la récupération des données se fait
-          automatiquement en allant du premier champ au dernier champ. <br />
         </p>
         <CodeSnippet codeString={codeString} />
       </>

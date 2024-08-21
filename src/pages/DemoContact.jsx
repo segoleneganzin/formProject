@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import { Form } from 'sg-form-lib';
-import { fieldConfigPerso } from '../fieldConfigPerso';
+import { fieldConfigPerso } from '../utils/fieldConfigPerso';
 
 const DemoContact = () => {
   const [validationMessage, setValidationMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleForm = (name, email, message) => {
-    console.log(name, email, message);
+  const handleForm = (formDatas) => {
+    console.log(formDatas);
     try {
       setErrorMessage('');
       // Here you can manage action when form is well submitted
